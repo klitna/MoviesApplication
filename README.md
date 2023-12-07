@@ -20,7 +20,7 @@ MoviesApp is an Android app built using Jetpack Compose and Retrofit to interact
 
 You can download the latest APK of the MoviesApp from the following link:
 
-[DOWNLOAD APK](https://github.com/klitna/MoviesApplication/files/13603760/app.zip)
+[DOWNLOAD APK](https://github.com/klitna/MoviesApplication/files/13603847/app.zip)
 
 
 
