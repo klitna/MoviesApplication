@@ -103,7 +103,8 @@ dependencies {
     //Testing
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:1.5.4"
     androidTestImplementation("androidx.compose.ui:ui-test-junit4-android:1.5.1")
-
+    androidTestImplementation("androidx.compose.ui:ui-test:1.5.4")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.4")
     androidTestImplementation "androidx.compose.ui:ui-test-manifest:1.5.4"
     androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
     androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1"

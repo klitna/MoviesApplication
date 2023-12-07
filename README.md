@@ -1,14 +1,14 @@
-# MooviesApplication
+# MoviesApplication
 
 
-OompaloompaApp is an Android app built using Jetpack Compose and Retrofit to interact with the Oompaloompa API. This app allows you to explore show lists of Oompaloompas workers and explore their details.
+MoviesApp is an Android app built using Jetpack Compose and Retrofit to interact with the TMDB API. This app allows you to explore show lists of movies and explore the details.
 
 ## Features
 
-- View detailed information about Oompaloompas, including personal details and favorites.
-- Filter lists of Oompaloompas.
+- View detailed film information.
+- Filter lists of films.
 - Utilize the power of Jetpack Compose for building a modern and responsive user interface.
-- Fetch data from the Oompaloompa API using Retrofit for seamless network communication.
+- Fetch data from the TMDB API using Retrofit for seamless network communication.
 
 ## How to Build and Run
 
@@ -18,9 +18,9 @@ OompaloompaApp is an Android app built using Jetpack Compose and Retrofit to int
 
 ## Download APK
 
-You can download the latest APK of the OompaloompaApp from the following link:
+You can download the latest APK of the MoviesApp from the following link:
 
-[Download APK](https://github.com/klitna/OompaLoompaApp/files/12387146/oompa-loompa-app.apk.zip)
+[Download APK]
 
 
 
