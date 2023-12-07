@@ -35,6 +35,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonColors
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Checkbox
 import androidx.compose.material.CheckboxDefaults
 import androidx.compose.material.DropdownMenu
@@ -55,7 +57,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -279,62 +284,6 @@ fun LoadMoreButton(
 }
 
 @Composable
-fun FilterItem(
-    title: String,
-    options: List<String>,
-    expanded: Boolean,
-    selectedOptions: List<String>,
-    onOptionSelected: (String) -> Unit,
-    onExpandToggle: () -> Unit
-) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(Paddings.small),
-        elevation = CardDefaults.cardElevation(8.dp),
-        colors = CardDefaults.cardColors(MaterialTheme.colorScheme.primary),
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onExpandToggle() },
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(text = title, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onPrimary)
-                Icon(
-                    imageVector = if (expanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
-                    contentDescription = "Expand icon",
-                    tint = MaterialTheme.colorScheme.onPrimary
-                )
-            }
-
-            if (expanded) {
-                options.forEach { option ->
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 8.dp)
-                            .clickable { onOptionSelected(option) },
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Checkbox(
-                            checked = selectedOptions.contains(option),
-                            onCheckedChange = null,
-                            colors = CheckboxDefaults.colors(MaterialTheme.colorScheme.onPrimary)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(text = option, color = MaterialTheme.colorScheme.onPrimary)
-                    }
-                }
-            }
-        }
-    }
-}
-@Composable
 fun FilterComponent(
     onFilterChanged: (String, String) -> Unit,
     initialTitleFilter: String = "",
@@ -372,9 +321,13 @@ fun FilterComponent(
             onClick = {
                 onFilterChanged(titleFilter, yearFilter)
             },
-            modifier = Modifier.align(Alignment.End)
+            modifier = Modifier.align(Alignment.End),
+            colors = ButtonDefaults.buttonColors(
+                backgroundColor = MaterialTheme.colorScheme.onPrimary,
+                contentColor = MaterialTheme.colorScheme.primary),
+            shape = CircleShape
         ) {
-            Text(stringResource(id = R.string.search))
+            Text(stringResource(id = R.string.search), color = MaterialTheme.colorScheme.primary)
         }
     }
 }
