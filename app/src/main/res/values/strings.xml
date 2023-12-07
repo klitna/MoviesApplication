@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+
+    <!-- Image path -->
+    <string name="path">https://www.themoviedb.org/t/p/original</string>
+
+    <string name="movies_app">TMDB MOVIES APP</string>
+
+    <string name="movie_details">Movie details</string>
+    <string name="movie_info">Movie Information</string>
+    <string name="favorites">Favorites</string>
+    <string name="load_next_page">Next >></string>
+    <string name="load_previous_page">&lt;&lt; Previous</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="date">Release date</string>
+    <string name="original_language">Language</string>
+    <string name="original_title">Original title</string>
+    <string name="footage_location">Footage location</string>
+    <string name="number_of_votes">Votes</string>
+    <string name="average_vote">Average vote</string>
+    <string name="unknown">Unknown</string>
+    <string name="color">Color</string>
+    <string name="food">Food</string>
+    <string name="random">Random</string>
+    <string name="song">Song</string>
+    <string name="see_string">See the string</string>
+    <string name="see_song">See the song</string>
+    <string name="adult">For adults</string>
+    <string name="all_ages">For all ages</string>
+    <string name="search">Search</string>
+</resources>
