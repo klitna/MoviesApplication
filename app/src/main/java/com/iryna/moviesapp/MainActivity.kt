@@ -15,7 +15,7 @@ import com.iryna.moviesapp.presentation.error.ErrorScreen
 import com.iryna.moviesapp.presentation.navigation.NavItem
 import com.iryna.moviesapp.presentation.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
-import com.iryna.moviesapp.presentation.moviedetails.WorkerDetails
+import com.iryna.moviesapp.presentation.moviedetails.MovieDetails
 import com.iryna.moviesapp.presentation.movies.MoviesScreen
 
 @AndroidEntryPoint
@@ -47,7 +47,7 @@ fun WorkersApp(navController: NavHostController) {
         ) { backStackEntry ->
             val movieId = backStackEntry.arguments?.getInt("movieId") ?: -1
 
-            WorkerDetails(onCloseClick = { navController.navigate(NavItem.MOVIES.route)}, movieId = movieId)
+            MovieDetails(onCloseClick = { navController.navigate(NavItem.MOVIES.route)}, movieId = movieId)
         }
         composable(
             route = "${NavItem.ERROR.route}/{origin}",

@@ -4,7 +4,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
@@ -32,7 +31,7 @@ import com.iryna.moviesapp.R
 import com.iryna.moviesapp.util.Constants
 
 @Composable
-fun WorkerDetails(
+fun MovieDetails(
     viewModel: MovieDetailedViewModel = hiltViewModel(),
     onCloseClick: () -> Unit,
     movieId: Int
@@ -75,7 +74,7 @@ fun WorkerDetailedScreen(state: MovieDetailedState, onCloseClick: () -> Unit, vi
                 }
 
                 if (!state.movieDetailed?.title.isNullOrEmpty()) {
-                    WorkerDetailedContent(state)
+                    MovieDetailedContent(state)
                 }
             }
         }
@@ -83,7 +82,7 @@ fun WorkerDetailedScreen(state: MovieDetailedState, onCloseClick: () -> Unit, vi
 }
 
 @Composable
-fun WorkerDetailedContent(state: MovieDetailedState) {
+fun MovieDetailedContent(state: MovieDetailedState) {
     Column {
         LazyColumn(
             modifier = Modifier
